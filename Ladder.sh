@@ -48,18 +48,32 @@ function Player( ){
 read -p "Enter player Number 1 for a and 2 for z " num
 echo "Player $num"
 }
-Player
+
 a=1
 z=1
 win=0
 isWon( ){
+Player
  while [ $win -eq 0 ]
   {
     if [ $num -eq 1 ]
-    then 
-         Dice
-          a=$(( a+rnd ))
+        then 
+           Dice
+             a=$(( a+rnd ))
+      
+      else
+           Dice
+	      z=$(( z+rnd ))
     fi
+  if [ $z -gt 99 -o $a -gt 99 ]
+  then
+      win=1
   }
-
+ if [ $a -gt 99 ]
+ then 
+      echo "a is winner"
+   else
+   echo "z is winner "
+fi
 }
+isWon
