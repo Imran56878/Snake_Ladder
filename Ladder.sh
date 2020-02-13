@@ -49,3 +49,17 @@ read -p "Enter player Number 1 for a and 2 for z " num
 echo "Player $num"
 }
 Player
+a=1
+z=1
+win=0
+isWon( ){
+ while [ $win -eq 0 ]
+  {
+    if [ $num -eq 1 ]
+    then 
+         Dice
+          a=$(( a+rnd ))
+    fi
+  }
+
+}
