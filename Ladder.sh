@@ -44,3 +44,8 @@ rnd=$((1+RANDOM%6))
 echo "random value is : $rnd"
 }
 Dice
+function Player( ){
+read -p "Enter player Number 1 for a and 2 for z " num
+echo "Player $num"
+}
+Player
