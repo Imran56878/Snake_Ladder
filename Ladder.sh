@@ -70,6 +70,7 @@ Player
       win=1
 fi
   done
+
  if [ $a -gt 99 ]
  then 
       echo "a is winner"
@@ -78,3 +79,4 @@ fi
 fi
 }
 isWon
+
