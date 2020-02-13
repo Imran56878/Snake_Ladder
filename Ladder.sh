@@ -38,3 +38,9 @@ else
  }
   echo ""
   }
+function Dice( )
+{
+rnd=$((1+RANDOM%6))
+echo "random value is : $rnd"
+}
+Dice
