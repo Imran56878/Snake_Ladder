@@ -55,7 +55,7 @@ win=0
 isWon( ){
 Player
  while [ $win -eq 0 ]
-  {
+  do
     if [ $num -eq 1 ]
         then 
            Dice
@@ -68,7 +68,8 @@ Player
   if [ $z -gt 99 -o $a -gt 99 ]
   then
       win=1
-  }
+fi
+  done
  if [ $a -gt 99 ]
  then 
       echo "a is winner"
