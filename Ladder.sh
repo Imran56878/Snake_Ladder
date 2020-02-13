@@ -34,7 +34,7 @@ else
         echo -ne "|| ${arr[$i,$j]} "
       fi
    count=$(( count-1 ))
-fi
-}
-echo ""
-}
+ fi
+ }
+  echo ""
+  }
