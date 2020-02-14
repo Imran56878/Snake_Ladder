@@ -49,3 +49,4 @@ read -p "Enter player Number 1 for a and 2 for z " num
 echo "Player $num"
 }
 Player
+eco "Hello"
