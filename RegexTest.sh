@@ -57,24 +57,21 @@ else
    echo "Invalid Password"
 fi
 }
-#FirstName
-#LastName
-#Mail
-#Mobile
-#Password
+echo "1:FirstName , 2:LastName , 3:Mail , 4:MobileNumber , 5:Password "
 read -p "Enter your choice :" option
-case $option in
- "1" )
+ case $option in
+  "1" )
       FirstName ;;
- "2" )
+  "2" )
       LastNam ;;
- "3" )
+  "3" )
       Mail ;;
- "4" )
+  "4" )
       Mobile ;;
- "5" )
+  "5" )
      Password ;;
   * )
     echo "Wrong Choice" ;;
 
  esac
+
