@@ -63,7 +63,7 @@ read -p "Enter your choice :" option
   "1" )
       FirstName ;;
   "2" )
-      LastNam ;;
+      LastName ;;
   "3" )
       Mail ;;
   "4" )

@@ -55,11 +55,11 @@ function isWon( )
 if [ $a -eq 100 ]
  then
     win=1
-    echo "a is winner"
+    echo "Player1 is winner"
    elif [ $z -eq 100 ]
     then
      win=1
-     echo "z is winner" 
+     echo "Player2 is winner" 
    fi
 }
 function Down( )
@@ -67,11 +67,11 @@ function Down( )
  if [ $a -eq 99 ]
   then
       a=1
-      echo " a is on down "
+      echo " playr1 is on down "
   elif [ $z -eq 99 ]
    then
       z=1
-     echo " z is on down "
+     echo " player2 is on down "
   fi
  }
 function Up( )
@@ -79,15 +79,15 @@ function Up( )
 if [ $a -eq 7 ]
  then
    a=23
-   echo " a got ladder"
+   echo " playr1 got ladder"
   elif [ $z -eq 7 ]
    then 
       z=23
-     echo "z got ladder"
+     echo "player2 got ladder"
   fi
 
 }
-
+ft=0
 TestCondition( )
 {
  Player
@@ -96,6 +96,7 @@ TestCondition( )
     if [ $num -eq 1 ]
         then 
            Dice
+            ft=$(( ft+1 ))
              a=$(( a+rnd ))
       	     if [ $a -gt 100 ]
               then
@@ -103,11 +104,12 @@ TestCondition( )
             fi
 	     Up
              Down
-             echo "Player1  value is : $rnd and count is : $a"
+             echo "Player1  value is : $rnd and pos is : $a"
              isWon
              num=2
      else
            Dice
+            ft=$(( ft+1 ))
 	      z=$(( z+rnd ))
              if [ $z -gt 100 ]
               then
@@ -115,10 +117,11 @@ TestCondition( )
               fi
 	       Up
                Down
-               echo "Player2 value is : $rnd and count is : $z"
+               echo "Player2 value is : $rnd and pos is : $z"
                isWon
                num=1
    fi
   done
 }
 TestCondition
+echo "Total roll count is : $ft "
